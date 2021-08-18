@@ -53,22 +53,285 @@ class ContinentsPage extends StatelessWidget {
         ]
     ),
     SizedBox(height: 20,),
+    Country(
+        'Saudi Arabia',
+        'arabia',
+        [
+          Colors.green,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Iraq',
+        'iraq',
+        [
+          Colors.black,
+          Colors.white,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Qatar',
+        'qatar',
+        [
+          Colors.white,
+          Color(0xff872626),
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Pakistan',
+        'pakistan',
+        [
+          Colors.white,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Malaysia',
+        'malaysia',
+        [
+          Colors.red,
+          Colors.white,
+        ]
+    ),
+    SizedBox(height: 20,),
   ];
 
   List<Widget> africaCountries = [
-
+    SizedBox(height: 20,),
+    Country(
+        'Algeria',
+        'algeria',
+        [
+          Colors.white,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Ghana',
+        'ghana',
+        [
+          Colors.green,
+          Colors.amber,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Nigeria',
+        'nigeria',
+        [
+          Colors.yellow,
+          Color(0xff1f2a7f),
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Tunisia',
+        'tunisia',
+        [
+          Colors.red,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'South Africa',
+        'south_africa',
+        [
+          Colors.red,
+          Colors.amber,
+          Colors.green,
+        ]
+    ),
   ];
   List<Widget> europeCountries = [
-
+    SizedBox(height: 20,),
+    Country(
+        'Germany',
+        'germany',
+        [
+          Colors.black,
+          Colors.red,
+          Colors.amber
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'France',
+        'france',
+        [
+          Colors.blue,
+          Colors.white,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Sweden',
+        'sweden',
+        [
+          Colors.yellow,
+          Color(0xff1f2a7f),
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Hungary',
+        'hungary',
+        [
+          Colors.red,
+          Colors.white,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Italy',
+        'italy',
+        [
+          Colors.green,
+          Colors.white,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'United kingdom',
+        'uk',
+        [
+          Colors.white,
+          Colors.red,
+          Color(0xff1f2a7f),
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Spain',
+        'spain',
+        [
+          Colors.amber,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Portugal',
+        'portugal',
+        [
+          Colors.red,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Finland',
+        'finland',
+        [
+          Colors.blue,
+          Colors.white,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Switzerland',
+        'swiss',
+        [
+          Colors.white,
+          Colors.red,
+        ]
+    ),
+    SizedBox(height: 20,),
   ];
   List<Widget> southAmericaCountries = [
-
+    SizedBox(height: 20,),
+    Country(
+        'Brazil',
+        'brazil',
+        [
+          Colors.green,
+          Colors.blue,
+          Colors.yellowAccent,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Argentina',
+        'argentina',
+        [
+          Colors.blue,
+          Colors.white,
+          Colors.blue,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Columbia',
+        'columbia',
+        [
+          Colors.yellow,
+          Color(0xff1f2a7f),
+          Colors.red
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Mexico',
+        'mexico',
+        [
+          Colors.red,
+          Colors.white,
+          Colors.green,
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Chile',
+        'chile',
+        [
+          Color(0xff1f2a7f),
+          Colors.white,
+          Colors.red,
+        ]
+    ),
   ];
   List<Widget> northAmericaCountries = [
-
+    SizedBox(height: 20,),
+    Country(
+        'United States Of America',
+        'us',
+        [
+          Colors.white,
+          Colors.red,
+          Colors.blue
+        ]
+    ),
+    SizedBox(height: 20,),
+    Country(
+        'Canada',
+        'canada',
+        [
+          Colors.red,
+          Colors.white,
+          Colors.red,
+        ]
+    ),
   ];
   List<Widget> oceaniaCountries = [
-
+    SizedBox(height: 20,),
+    Country(
+        'Australia',
+        'australia',
+        [
+          Color(0xff1f2a7f),
+          Colors.red,
+        ]
+    ),
   ];
 
   @override
@@ -79,8 +342,8 @@ class ContinentsPage extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.grey,
-                Colors.amberAccent,
+                Colors.white,
+                Colors.white,
               ]
             )
           ),
@@ -158,7 +421,7 @@ class ContinentsPage extends StatelessWidget {
       backgroundColor:Colors.black,
       appBar: AppBar(
         toolbarHeight: 50,
-        backgroundColor: Color(0xff000000),
+        backgroundColor: Colors.black54,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 10),
@@ -193,9 +456,8 @@ class ContinentsPage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [
-                Colors.black,
-                Colors.blue,
-                Colors.black,
+                Colors.white,
+                Colors.white,
               ]
           )
         ),
@@ -209,27 +471,33 @@ class ContinentsPage extends StatelessWidget {
               children: [
                 Continent(
                   'asia',
-                  asiaCountries
+                  asiaCountries,
+                  'Asia'
                 ),
                 Continent(
                     'europe',
                     europeCountries,
+                  'Europe'
                 ),
                 Continent(
                     'oceania',
                     oceaniaCountries,
+                  'Oceania'
                 ),
                 Continent(
                     'north_america',
                     northAmericaCountries,
+                  'North America'
                 ),
                 Continent(
                     'south_america',
                     southAmericaCountries,
+                  'South America'
                 ),
                 Continent(
                     'africa',
                   africaCountries,
+                  'Africa'
                 ),
               ],
             ),
@@ -244,8 +512,9 @@ class ContinentsPage extends StatelessWidget {
 class Continent extends StatelessWidget {
   var continentName;
   var listOfCountries;
+  var name;
 
-  Continent(this.continentName,this.listOfCountries);
+  Continent(this.continentName,this.listOfCountries,this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -253,21 +522,41 @@ class Continent extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors:[
+                Colors.white,
+                Colors.grey
+              ]
+            )
+          ),
           height: 300,
           width: 500,
           child: Card(
+            shadowColor: Colors.amber,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
-            elevation: 500,
-            child: ListTile(
-                dense: true,
-                title: ClipRRect(
-                  child: Image(
-                    fit: BoxFit.fitHeight,
-                    image: AssetImage('assets/images/${continentName}.jpg'),
+            elevation: 50,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                ListTile(
+                    dense: true,
+                    title: ClipRRect(
+                      child: Image(
+                        fit: BoxFit.fitHeight,
+                        image: AssetImage('assets/images/${continentName}.jpg'),
+                      ),
+                    ),
+                ),
+                Text(
+                    name,
+                  style: TextStyle(
+                    fontSize: 15
                   ),
-                )
+                ),
+              ],
             ),
           ),
         ),
@@ -295,7 +584,7 @@ class NavigationDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-        color: Colors.lightBlue,
+        color: Colors.black54,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25)),
         ),
