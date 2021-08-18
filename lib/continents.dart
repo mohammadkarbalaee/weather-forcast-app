@@ -55,31 +55,150 @@ class ContinentsPage extends StatelessWidget {
     SizedBox(height: 20,),
   ];
 
-  List<Widget> africaCountries = [];
-  List<Widget> europeCountries = [];
-  List<Widget> southAmericaCountries = [];
-  List<Widget> northAmericaCountries = [];
-  List<Widget> oceaniaCountries = [];
+  List<Widget> africaCountries = [
+
+  ];
+  List<Widget> europeCountries = [
+
+  ];
+  List<Widget> southAmericaCountries = [
+
+  ];
+  List<Widget> northAmericaCountries = [
+
+  ];
+  List<Widget> oceaniaCountries = [
+
+  ];
 
   @override
   Widget build(BuildContext context) {
-    double paddingRight = MediaQuery.of(context).size.width / 4;
     return Scaffold(
-      backgroundColor:Colors.black,
-      appBar: AppBar(
-        toolbarHeight: MediaQuery.of(context).size.height / 30,
-        backgroundColor: Colors.black,
-        title: Center(
-          child: Text(
-            'Weather Forecast',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+      drawer: Drawer(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.grey,
+                Colors.amberAccent,
+              ]
+            )
+          ),
+          child: ListView(
+            children: [
+              Container(
+                height: 150,
+                child: ClipRRect(
+                  child: Image(
+                    fit: BoxFit.fitHeight,
+                    image: AssetImage('assets/images/icon.png'),
+                  ),
+                ),
+              ),
+              NavigationDrawerItem(
+                'Settings',
+                Icon(Icons.settings,size: 25,color: Colors.white,),
+                  (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Container(
+                              child: Center(child: Text('settings')),
+                            )
+                        )
+                    );
+                  }
+              ),
+              NavigationDrawerItem(
+                'Contact us',
+                Icon(Icons.add_ic_call,size: 25,color: Colors.white,),
+                  (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Container(
+                              child: Center(child: Text('settings')),
+                            )
+                        )
+                    );
+                  }
+              ),
+              NavigationDrawerItem(
+                'About',
+                Icon(Icons.insert_comment_outlined,size: 25,color: Colors.white,),
+                  (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Container(
+                              child: Center(child: Text('settings')),
+                            )
+                        )
+                    );
+                  }
+              ),
+              NavigationDrawerItem(
+                'Rate us',
+                Icon(Icons.recommend,size: 25,color: Colors.white,),
+                  (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Container(
+                              child: Center(child: Text('settings')),
+                            )
+                        )
+                    );
+                  }
+              ),
+            ],
           ),
         ),
       ),
+      backgroundColor:Colors.black,
+      appBar: AppBar(
+        toolbarHeight: 50,
+        backgroundColor: Color(0xff000000),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Center(
+              child: Text(
+                'Weather Forecast',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 20,
+            child: ClipRRect(
+              child: Image(
+                fit: BoxFit.fitHeight,
+                image: AssetImage('assets/images/icon.png'),
+              ),
+            ),
+          ),
+        ],
+        primary: true,
+        automaticallyImplyLeading: true,
+        elevation: 40,
+        shadowColor: Colors.white,
+        shape: ContinuousRectangleBorder(),
+
+      ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [
+                Colors.black,
+                Colors.blue,
+                Colors.black,
+              ]
+          )
+        ),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(top: 45),
@@ -161,6 +280,38 @@ class Continent extends StatelessWidget {
           )
         );
       },
+    );
+  }
+}
+
+class NavigationDrawerItem extends StatelessWidget {
+  var title;
+  var icon;
+  var onTap;
+
+  NavigationDrawerItem(this.title,this.icon,this.onTap);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Card(
+        color: Colors.lightBlue,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+        ),
+        elevation: 50,
+        child: ListTile(
+          leading: icon,
+          title: Text(
+            title,
+            style: TextStyle(
+                fontSize: 20,
+                color: Colors.white
+            ),
+          ),
+          onTap: onTap,
+        ),
+      ),
     );
   }
 }
