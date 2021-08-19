@@ -26,16 +26,7 @@ class CityPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end:Alignment.bottomLeft,
-                    colors: [
-                      Color(0xffe7ee40),
-                      Colors.white
-                    ]
-                )
-            ),
+            color: Colors.lightBlue,
             child: Center(
               child: Container(
                 child: Padding(
@@ -144,8 +135,8 @@ class CityPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Colors.white,
-                          Colors.lightBlueAccent,
+                          Color(0xffe7ee40),
+                          Color(0xffe7ee40),
                         ]
                       )
                     ),

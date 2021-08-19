@@ -26,8 +26,10 @@ class NavigationDrawer extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Container(
-                            child: Center(child: Text('settings')),
+                          builder: (context) => Scaffold(
+                            body: Container(
+                              child: Center(child: Text('')),
+                            ),
                           )
                       )
                   );
@@ -40,8 +42,10 @@ class NavigationDrawer extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Container(
-                            child: Center(child: Text('settings')),
+                          builder: (context) => Scaffold(
+                            body: Container(
+                              child: Center(child: Text('')),
+                            ),
                           )
                       )
                   );
@@ -54,8 +58,10 @@ class NavigationDrawer extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Container(
-                            child: Center(child: Text('settings')),
+                          builder: (context) => Scaffold(
+                            body: Container(
+                              child: Center(child: Text('')),
+                            ),
                           )
                       )
                   );
@@ -68,8 +74,10 @@ class NavigationDrawer extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Container(
-                            child: Center(child: Text('settings')),
+                          builder: (context) => Scaffold(
+                            body: Container(
+                              child: Center(child: Text('')),
+                            ),
                           )
                       )
                   );
