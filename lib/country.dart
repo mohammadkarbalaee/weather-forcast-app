@@ -21,6 +21,7 @@ class Country extends StatelessWidget {
           ),
           height: MediaQuery.of(context).size.height / 7,
           child: Card(
+            color: Color(0xffb1aeae),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
@@ -35,7 +36,8 @@ class Country extends StatelessWidget {
                   countryName,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20
+                    fontSize: 20,
+                    color: Colors.white,
                   ),
                 ),
               ),

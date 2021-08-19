@@ -360,7 +360,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Settings',
-                Icon(Icons.settings,size: 25,color: Colors.white,),
+                Icon(Icons.settings,size: 25,color: Colors.black,),
                   (){
                     Navigator.push(
                         context,
@@ -374,7 +374,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Contact us',
-                Icon(Icons.add_ic_call,size: 25,color: Colors.white,),
+                Icon(Icons.add_ic_call,size: 25,color: Colors.black,),
                   (){
                     Navigator.push(
                         context,
@@ -388,7 +388,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'About',
-                Icon(Icons.insert_comment_outlined,size: 25,color: Colors.white,),
+                Icon(Icons.insert_comment_outlined,size: 25,color: Colors.black,),
                   (){
                     Navigator.push(
                         context,
@@ -402,7 +402,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Rate us',
-                Icon(Icons.recommend,size: 25,color: Colors.white,),
+                Icon(Icons.recommend,size: 25,color: Colors.black,),
                   (){
                     Navigator.push(
                         context,
@@ -421,7 +421,7 @@ class ContinentsPage extends StatelessWidget {
       backgroundColor:Colors.black,
       appBar: AppBar(
         toolbarHeight: 50,
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.lightBlueAccent,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 10),
@@ -522,18 +522,9 @@ class Continent extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors:[
-                Colors.white,
-                Colors.grey
-              ]
-            )
-          ),
           height: 300,
           width: 500,
           child: Card(
-            shadowColor: Colors.amber,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
@@ -584,18 +575,17 @@ class NavigationDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-        color: Colors.black54,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25)),
         ),
-        elevation: 50,
+        elevation: 20,
         child: ListTile(
           leading: icon,
           title: Text(
             title,
             style: TextStyle(
                 fontSize: 20,
-                color: Colors.white
+                color: Colors.black
             ),
           ),
           onTap: onTap,

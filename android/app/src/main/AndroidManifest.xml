@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.muhammad.ksht.weather_forecast">
    <application
-        android:label="weather_forecast"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Weather Forecast"
+        android:icon="@mipmap/icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
