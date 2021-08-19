@@ -4,8 +4,9 @@ class Country extends StatelessWidget {
   var imageName;
   var countryName;
   var colors;
+  var cities;
 
-  Country(this.countryName,this.imageName,this.colors);
+  Country(this.countryName,this.imageName,this.colors,{this.cities});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,17 @@ class Country extends StatelessWidget {
             elevation: 500,
             child: ListTile(
               onTap: (){
-
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => Center(
+                          child: Container(
+                            child: Text(
+                              cities.toString()
+                            ),
+                          ),
+                        )
+                    )
+                );
               },
               title: Padding(
                 padding: const EdgeInsets.only(top: 15,left: 15),

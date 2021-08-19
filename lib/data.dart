@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'country.dart';
+import 'jsons.dart';
 
 class Data{
   static List<Widget> asiaCountries = [
@@ -11,7 +12,8 @@ class Data{
         [
           Colors.blue,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.korea,
     ),
     SizedBox(height: 20,),
     Country(
@@ -21,7 +23,8 @@ class Data{
           Colors.green,
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.iran,
     ),
     SizedBox(height: 20,),
     Country(
@@ -31,7 +34,8 @@ class Data{
           Colors.orange,
           Colors.white,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.india,
     ),
     SizedBox(height: 20,),
     Country(
@@ -40,7 +44,8 @@ class Data{
         [
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.japan,
     ),
     SizedBox(height: 20,),
     Country(
@@ -49,7 +54,8 @@ class Data{
         [
           Colors.red,
           Colors.redAccent,
-        ]
+        ],
+      cities: Jsons.china,
     ),
     SizedBox(height: 20,),
     Country(
@@ -58,7 +64,8 @@ class Data{
         [
           Colors.green,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.arabia,
     ),
     SizedBox(height: 20,),
     Country(
@@ -68,7 +75,8 @@ class Data{
           Colors.black,
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.iraq,
     ),
     SizedBox(height: 20,),
     Country(
@@ -77,7 +85,8 @@ class Data{
         [
           Colors.white,
           Color(0xff872626),
-        ]
+        ],
+      cities: Jsons.qatar,
     ),
     SizedBox(height: 20,),
     Country(
@@ -86,7 +95,8 @@ class Data{
         [
           Colors.white,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.pakistan,
     ),
     SizedBox(height: 20,),
     Country(
@@ -95,7 +105,8 @@ class Data{
         [
           Colors.red,
           Colors.white,
-        ]
+        ],
+      cities: Jsons.malaysia,
     ),
     SizedBox(height: 20,),
   ];
