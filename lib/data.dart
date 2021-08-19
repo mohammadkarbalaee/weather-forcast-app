@@ -119,7 +119,8 @@ class Data{
         [
           Colors.white,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.algeria,
     ),
     SizedBox(height: 20,),
     Country(
@@ -129,7 +130,8 @@ class Data{
           Colors.green,
           Colors.amber,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.ghana,
     ),
     SizedBox(height: 20,),
     Country(
@@ -138,7 +140,8 @@ class Data{
         [
           Colors.yellow,
           Color(0xff1f2a7f),
-        ]
+        ],
+      cities: Jsons.nigeria,
     ),
     SizedBox(height: 20,),
     Country(
@@ -147,7 +150,8 @@ class Data{
         [
           Colors.red,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.tunisia,
     ),
     SizedBox(height: 20,),
     Country(
@@ -157,7 +161,8 @@ class Data{
           Colors.red,
           Colors.amber,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.south,
     ),
     SizedBox(height: 20,),
   ];
@@ -170,7 +175,8 @@ class Data{
           Colors.black,
           Colors.red,
           Colors.amber
-        ]
+        ],
+      cities: Jsons.germany,
     ),
     SizedBox(height: 20,),
     Country(
@@ -180,7 +186,8 @@ class Data{
           Colors.blue,
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.france,
     ),
     SizedBox(height: 20,),
     Country(
@@ -189,7 +196,8 @@ class Data{
         [
           Colors.yellow,
           Color(0xff1f2a7f),
-        ]
+        ],
+      cities: Jsons.sweden,
     ),
     SizedBox(height: 20,),
     Country(
@@ -199,7 +207,8 @@ class Data{
           Colors.red,
           Colors.white,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.hungary,
     ),
     SizedBox(height: 20,),
     Country(
@@ -209,7 +218,8 @@ class Data{
           Colors.green,
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.italy,
     ),
     SizedBox(height: 20,),
     Country(
@@ -219,7 +229,8 @@ class Data{
           Colors.white,
           Colors.red,
           Color(0xff1f2a7f),
-        ]
+        ],
+      cities: Jsons.uk,
     ),
     SizedBox(height: 20,),
     Country(
@@ -228,7 +239,8 @@ class Data{
         [
           Colors.amber,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.spain,
     ),
     SizedBox(height: 20,),
     Country(
@@ -237,7 +249,8 @@ class Data{
         [
           Colors.red,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.portugal,
     ),
     SizedBox(height: 20,),
     Country(
@@ -246,7 +259,8 @@ class Data{
         [
           Colors.blue,
           Colors.white,
-        ]
+        ],
+      cities: Jsons.finland,
     ),
     SizedBox(height: 20,),
     Country(
@@ -255,7 +269,8 @@ class Data{
         [
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.swiss,
     ),
     SizedBox(height: 20,),
   ];
@@ -268,7 +283,8 @@ class Data{
           Colors.green,
           Colors.blue,
           Colors.yellowAccent,
-        ]
+        ],
+      cities: Jsons.brazil,
     ),
     SizedBox(height: 20,),
     Country(
@@ -278,7 +294,8 @@ class Data{
           Colors.blue,
           Colors.white,
           Colors.blue,
-        ]
+        ],
+      cities: Jsons.argentina,
     ),
     SizedBox(height: 20,),
     Country(
@@ -288,7 +305,8 @@ class Data{
           Colors.yellow,
           Color(0xff1f2a7f),
           Colors.red
-        ]
+        ],
+      cities: Jsons.columbia,
     ),
     SizedBox(height: 20,),
     Country(
@@ -298,7 +316,8 @@ class Data{
           Colors.red,
           Colors.white,
           Colors.green,
-        ]
+        ],
+      cities: Jsons.mexico,
     ),
     SizedBox(height: 20,),
     Country(
@@ -308,7 +327,8 @@ class Data{
           Color(0xff1f2a7f),
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.chile,
     ),
     SizedBox(height: 20,),
   ];
@@ -321,7 +341,8 @@ class Data{
           Colors.white,
           Colors.red,
           Colors.blue
-        ]
+        ],
+      cities: Jsons.usa,
     ),
     SizedBox(height: 20,),
     Country(
@@ -331,7 +352,8 @@ class Data{
           Colors.red,
           Colors.white,
           Colors.red,
-        ]
+        ],
+      cities: Jsons.canada,
     ),
     SizedBox(height: 20,),
   ];
@@ -343,7 +365,8 @@ class Data{
         [
           Color(0xff1f2a7f),
           Colors.red,
-        ]
+        ],
+      cities: Jsons.australia,
     ),
     SizedBox(height: 20,),
   ];

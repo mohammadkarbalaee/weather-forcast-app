@@ -152,26 +152,32 @@ class CityPage extends StatelessWidget {
                     child: FutureBuilder(
                       future: getFiveDays(name),
                       builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                        return ListView.builder(
-                          itemCount: 5,
-                          controller: controller,
-                          itemBuilder: (BuildContext context, int index) {
-                            var day = '';
-                            switch(index){
-                              case 0: day = 'tomorrow'; break;
-                              case 1: day = '2 days later'; break;
-                              case 2: day = '3 days later'; break;
-                              case 3: day = '4 days later'; break;
-                              case 4: day = '5 days later'; break;
-                            }
-                            return Day(
+                        if(snapshot.data == null){
+                          return Container(
+                            height: 20,
+                              child: LinearProgressIndicator());
+                        } else {
+                          return ListView.builder(
+                            itemCount: 5,
+                            controller: controller,
+                            itemBuilder: (BuildContext context, int index) {
+                              var day = '';
+                              switch(index){
+                                case 0: day = 'tomorrow'; break;
+                                case 1: day = '2 days later'; break;
+                                case 2: day = '3 days later'; break;
+                                case 3: day = '4 days later'; break;
+                                case 4: day = '5 days later'; break;
+                              }
+                              return Day(
                                 day,
                                 snapshot.data[index]['weather'][0]['main'],
                                 snapshot.data[index]['weather'][0]["icon"],
                                 snapshot.data[index]['weather'][0]['description'],
-                            );
-                          },
-                        );
+                              );
+                            },
+                          );
+                        }
                       },
                     ),
                   ),
