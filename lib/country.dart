@@ -24,7 +24,7 @@ class Country extends StatelessWidget {
                   colors: colors,
               )
           ),
-          height: MediaQuery.of(context).size.height / 7,
+          height: 80,
           child: Card(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -67,7 +67,7 @@ class Country extends StatelessWidget {
                 ),
               ),
               trailing: Container(
-                height: MediaQuery.of(context).size.height / 5,
+                height: 200,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(300),
                   child: Image(
