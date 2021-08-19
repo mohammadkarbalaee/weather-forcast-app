@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:weather_forecast/cities_page.dart';
 
 class Country extends StatelessWidget {
   var imageName;
@@ -22,23 +26,32 @@ class Country extends StatelessWidget {
           ),
           height: MediaQuery.of(context).size.height / 7,
           child: Card(
-            // color: Color(0xffb1aeae),
             color: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
             elevation: 500,
             child: ListTile(
-              onTap: (){
+              onTap: () async {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: LinearProgressIndicator(
+                    color: Color(0xffe7ee40),
+                  ),
+                  elevation: 100,
+                  duration: Duration(seconds: 9),
+                  backgroundColor: Colors.black87,
+                ));
+                List citiesToPass = [];
+                for(var i = 0;  i < 10; i++){
+                  http.Response serverResponse = await http.get(Uri.parse(
+                    'https://api.openweathermap.org/data/2.5/weather?id=${cities[i]['id']}&units=metric&appid=1b651d8d35975b3f26f39e6088ed8146'
+                  ));
+                  var climate = json.decode(utf8.decode(serverResponse.bodyBytes));
+                  citiesToPass.add(climate);
+                }
                 Navigator.of(context).push(
                     MaterialPageRoute(
-                        builder: (context) => Center(
-                          child: Container(
-                            child: Text(
-                              cities.toString()
-                            ),
-                          ),
-                        )
+                        builder: (context) => CitiesPage(citiesToPass)
                     )
                 );
               },
