@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:weather_forecast/day.dart';
 
 class CityPage extends StatelessWidget {
   var name;
@@ -145,12 +149,28 @@ class CityPage extends StatelessWidget {
                         ]
                       )
                     ),
-                    child: ListView.builder(
-                      itemCount: 100,
-                      controller: controller,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          title: Text('item'),
+                    child: FutureBuilder(
+                      future: getFiveDays(name),
+                      builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                        return ListView.builder(
+                          itemCount: 5,
+                          controller: controller,
+                          itemBuilder: (BuildContext context, int index) {
+                            var day = '';
+                            switch(index){
+                              case 0: day = 'tomorrow'; break;
+                              case 1: day = '2 days later'; break;
+                              case 2: day = '3 days later'; break;
+                              case 3: day = '4 days later'; break;
+                              case 4: day = '5 days later'; break;
+                            }
+                            return Day(
+                                day,
+                                snapshot.data[index]['weather'][0]['main'],
+                                snapshot.data[index]['weather'][0]["icon"],
+                                snapshot.data[index]['weather'][0]['description'],
+                            );
+                          },
                         );
                       },
                     ),
@@ -162,4 +182,13 @@ class CityPage extends StatelessWidget {
       ),
     );
   }
+}
+
+Future<List> getFiveDays(name) async {
+  http.Response serverResponse = await http.get(Uri.parse(
+      'https://api.openweathermap.org/data/2.5/forecast?q=${name}&appid=1b651d8d35975b3f26f39e6088ed8146'
+  ));
+  var climate = json.decode(utf8.decode(serverResponse.bodyBytes));
+  List result = climate['list'];
+  return result.sublist(1,6);
 }
