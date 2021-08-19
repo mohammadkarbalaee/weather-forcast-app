@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'continents.dart';
+import 'continents_page.dart';
 
 void main() {
   runApp(
