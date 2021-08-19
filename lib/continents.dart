@@ -443,48 +443,45 @@ class ContinentsPage extends StatelessWidget {
         ],
         primary: true,
       ),
-      body: Container(
-        color: Colors.lightBlueAccent,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 45),
-            child: GridView.count(
-              crossAxisSpacing: 5,
-              mainAxisSpacing: 5,
-              crossAxisCount: 2,
-              children: [
-                Continent(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: GridView.count(
+            crossAxisSpacing: 5,
+            mainAxisSpacing: 5,
+            crossAxisCount: 2,
+            children: [
+              Continent(
                   'asia',
                   asiaCountries,
                   'Asia'
-                ),
-                Continent(
-                    'europe',
-                    europeCountries,
+              ),
+              Continent(
+                  'europe',
+                  europeCountries,
                   'Europe'
-                ),
-                Continent(
-                    'oceania',
-                    oceaniaCountries,
+              ),
+              Continent(
+                  'oceania',
+                  oceaniaCountries,
                   'Oceania'
-                ),
-                Continent(
-                    'north_america',
-                    northAmericaCountries,
+              ),
+              Continent(
+                  'north_america',
+                  northAmericaCountries,
                   'North America'
-                ),
-                Continent(
-                    'south_america',
-                    southAmericaCountries,
+              ),
+              Continent(
+                  'south_america',
+                  southAmericaCountries,
                   'South America'
-                ),
-                Continent(
-                    'africa',
+              ),
+              Continent(
+                  'africa',
                   africaCountries,
                   'Africa'
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
