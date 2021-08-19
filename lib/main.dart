@@ -5,9 +5,7 @@ import 'continents.dart';
 void main() {
   runApp(
       MaterialApp(
-          home: ContinentsPage(
-
-          )
+          home: ContinentsPage()
       )
   );
 }

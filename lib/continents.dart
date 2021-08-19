@@ -339,14 +339,7 @@ class ContinentsPage extends StatelessWidget {
     return Scaffold(
       drawer: Drawer(
         child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.white,
-              ]
-            )
-          ),
+          color: Color(0xffe7ee40),
           child: ListView(
             children: [
               Container(
@@ -360,7 +353,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Settings',
-                Icon(Icons.settings,size: 25,color: Colors.black,),
+                Icon(Icons.settings,size: 25,color: Colors.black54,),
                   (){
                     Navigator.push(
                         context,
@@ -374,7 +367,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Contact us',
-                Icon(Icons.add_ic_call,size: 25,color: Colors.black,),
+                Icon(Icons.add_ic_call,size: 25,color: Colors.black54,),
                   (){
                     Navigator.push(
                         context,
@@ -388,7 +381,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'About',
-                Icon(Icons.insert_comment_outlined,size: 25,color: Colors.black,),
+                Icon(Icons.insert_comment_outlined,size: 25,color: Colors.black54,),
                   (){
                     Navigator.push(
                         context,
@@ -402,7 +395,7 @@ class ContinentsPage extends StatelessWidget {
               ),
               NavigationDrawerItem(
                 'Rate us',
-                Icon(Icons.recommend,size: 25,color: Colors.black,),
+                Icon(Icons.recommend,size: 25,color: Colors.black54,),
                   (){
                     Navigator.push(
                         context,
@@ -418,10 +411,12 @@ class ContinentsPage extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor:Colors.black,
+      backgroundColor:Colors.lightBlueAccent,
       appBar: AppBar(
-        toolbarHeight: 50,
-        backgroundColor: Colors.lightBlueAccent,
+        iconTheme: IconThemeData(
+          color: Colors.black54,
+        ),
+        backgroundColor: Color(0xffe7ee40),
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 10),
@@ -431,6 +426,7 @@ class ContinentsPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  color: Colors.black54
                 ),
               ),
             ),
@@ -446,21 +442,9 @@ class ContinentsPage extends StatelessWidget {
           ),
         ],
         primary: true,
-        automaticallyImplyLeading: true,
-        elevation: 40,
-        shadowColor: Colors.white,
-        shape: ContinuousRectangleBorder(),
-
       ),
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.white,
-              ]
-          )
-        ),
+        color: Colors.lightBlueAccent,
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(top: 45),
@@ -544,7 +528,8 @@ class Continent extends StatelessWidget {
                 Text(
                     name,
                   style: TextStyle(
-                    fontSize: 15
+                    fontSize: 15,
+                    color: Colors.black54
                   ),
                 ),
               ],
@@ -576,16 +561,16 @@ class NavigationDrawerItem extends StatelessWidget {
     return Container(
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
+          borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
-        elevation: 20,
+        elevation: 10,
         child: ListTile(
           leading: icon,
           title: Text(
             title,
             style: TextStyle(
                 fontSize: 20,
-                color: Colors.black
+                color: Colors.black54
             ),
           ),
           onTap: onTap,
