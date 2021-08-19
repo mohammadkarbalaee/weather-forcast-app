@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:weather_forecast/city_page.dart';
 
 class City extends StatelessWidget {
   var name;
   var main;
   var image;
   var subtitle;
+  var mainData;
+  var wind;
 
-  City(this.name,this.main,this.image,this.subtitle);
+  City(this.name,this.main,this.image,this.subtitle,this.mainData,this.wind);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,18 @@ class City extends StatelessWidget {
             height: MediaQuery.of(context).size.height / 9,
             child: ListTile(
                 onTap: () {
-                  print('fuck');
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => CityPage(
+                          name,
+                          main,
+                          image,
+                          subtitle,
+                          mainData,
+                          wind,
+                          )
+                      )
+                  );
                 },
                 leading: Card(
                   color: Colors.black12,

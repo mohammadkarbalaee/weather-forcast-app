@@ -28,6 +28,8 @@ class CitiesPage extends StatelessWidget {
                   cities[index]['weather'][0]['main'],
                   cities[index]['weather'][0]['icon'],
                   cities[index]['weather'][0]['description'],
+                  cities[index]['main'],
+                  cities[index]['wind'],
               );
             },
           ),

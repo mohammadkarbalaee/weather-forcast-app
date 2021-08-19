@@ -38,7 +38,7 @@ class Country extends StatelessWidget {
                     color: Color(0xffe7ee40),
                   ),
                   elevation: 100,
-                  duration: Duration(seconds: 9),
+                  duration: Duration(seconds: 12),
                   backgroundColor: Colors.black87,
                 ));
                 List citiesToPass = [];
